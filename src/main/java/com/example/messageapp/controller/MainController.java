@@ -36,7 +36,10 @@ public class MainController {
         } catch (Exception e) {
             return ResponseEntity.status(400).body(
                     """
-                            Error: Message title has to be UNIQUE and values cannot be NULL or BLANK.
+                            ERROR: Message title has to be UNIQUE and values cannot be NULL or BLANK.
+                            
+                            title max lenght is 50.
+                            content max lenght is 400.
                             """
             );
         }

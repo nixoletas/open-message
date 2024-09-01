@@ -15,12 +15,12 @@ public class Message {
 
     @NotNull
     @NotBlank
-    @Column(nullable = false, unique = true, length = 50)
+    @Column(nullable = false, unique = true, length = 50, name = "title")
     private String title;
 
     @NotNull
     @NotBlank
-    @Column(nullable = false, length = 400)
+    @Column(nullable = false, length = 400, name = "content")
     private String content;
 
     private LocalDateTime createdAt;
@@ -33,19 +33,19 @@ public class Message {
         this.id = id;
     }
 
-    public String getMessage() {
+    public @NotNull @NotBlank String getTitle() {
         return title;
     }
 
-    public void setMessage(String message) {
-        this.title = message;
+    public void setTitle(@NotNull @NotBlank String title) {
+        this.title = title;
     }
 
-    public String getContent() {
+    public @NotNull @NotBlank String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
+    public void setContent(@NotNull @NotBlank String content) {
         this.content = content;
     }
 
