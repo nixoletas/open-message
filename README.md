@@ -1,3 +1,3 @@
 ```
-cp .env.example .env
+cp .example.env .env
 ```
